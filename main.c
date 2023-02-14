@@ -8,6 +8,7 @@ int main(int argc, char **argv)
 
     int i, num = 100;
     double *dat;
+    double sum = 0.0;
 
     //Allocating the array space
     dat = (double *) malloc(num * sizeof(double));
@@ -19,6 +20,11 @@ int main(int argc, char **argv)
     }
 
 
+    //Array reduction
+    for (i = 0; i < num; i++)
+    {
+	    sum += dat[i];
+    }
 
 
 
@@ -27,6 +33,8 @@ int main(int argc, char **argv)
     {
         printf("dat[%d] = %f\n", i, dat[i]);
     }
+
+    printf("\nsum = %f\n\n",sum);
 
     return 0;
 
