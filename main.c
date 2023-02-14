@@ -6,6 +6,27 @@
 int main(int argc, char **argv)
 {
 
+    int i, num = 100;
+    double *dat;
+
+    dat = (double *) malloc(num * sizeof(double));
+
+    for (i = 0; i < num; i++)
+    {
+        dat[i] = (double) i;
+    }
+
+
+
+
+
+
+    //Printing array
+    for (i = 0; i < num; i++)
+    {
+        printf("dat[%d] = %f\n", i, dat[i]);
+    }
+
     return 0;
 
 }
