@@ -10,6 +10,7 @@ int main(int argc, char **argv)
     double *dat;
     double sum = 0.0;
     double sqrt_sum = 0.0;
+    double sum_square = 0.0;
 
     //Allocating the array space
     dat = (double *) malloc(num * sizeof(double));
@@ -31,17 +32,21 @@ int main(int argc, char **argv)
     for (i = 0; i < num; i++)
     {
 	    sqrt_sum += sqrt(dat[i]);
+    
+	    sum_square += pow(dat[i],2);
     }
+
 
     //Printing array
     for (i = 0; i < num; i++)
     {
-        printf("dat[%d] = %f\n", i, dat[i]);
+        printf("dat[%d] = %f \n", i, dat[i]);
     }
 
-    printf("\nsum = %f\n\n",sum);
+    printf("\nsum = %f\n",sum);
+    printf("\nsum_square = %f\n",sum_square);
 
-    printf("\nsqrt_sum = %f\n\n",sqrt_sum);
+    printf("\nsqrt_sum = %f\n",sqrt_sum);
 
     return 0;
 
