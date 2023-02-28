@@ -1,14 +1,15 @@
 #include <stdio.h>
 #include <stdlib.h>
-
+#include <math.h>
 
 
 int main(int argc, char **argv)
 {
 
-    int i, num = 100;
+    int i, num = 3;
     double *dat;
     double sum = 0.0;
+    double sqrt_sum = 0.0;
 
     //Allocating the array space
     dat = (double *) malloc(num * sizeof(double));
@@ -26,7 +27,11 @@ int main(int argc, char **argv)
 	    sum += dat[i];
     }
 
-
+    //Array reduction
+    for (i = 0; i < num; i++)
+    {
+	    sqrt_sum += sqrt(dat[i]);
+    }
 
     //Printing array
     for (i = 0; i < num; i++)
@@ -35,6 +40,8 @@ int main(int argc, char **argv)
     }
 
     printf("\nsum = %f\n\n",sum);
+
+    printf("\nsqrt_sum = %f\n\n",sqrt_sum);
 
     return 0;
 
